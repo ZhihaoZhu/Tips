@@ -13,4 +13,4 @@ sudo apt install openssh-server
 sudo systemctl status ssh
 ```
 
-and the window should show 
+and the window should show ![ubuntu-ssh-status](/Images/ubuntu ssh tips/ubuntu-ssh-status.jpg)
