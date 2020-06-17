@@ -26,3 +26,24 @@ sudo ufw allow ssh
 ```Shell
 ssh username@ip_address
 ```
+
+## 5. Configure key based authentication
+
+### 5.1 Create your local SSH key pair
+```Shell
+ssh-keygen -t rsa -b 4096
+```
+
+Notice: when asked to enter passphrase, just ignore it
+
+### 5.2 Connecting to a macOS or Linux SSH host
+```Shell
+export USER_AT_HOST="your-user-name-on-host@hostname"
+export PUBKEYPATH="$HOME/.ssh/id_rsa.pub"
+ssh-copy-id -i "$PUBKEYPATH" "$USER_AT_HOST"
+```
+
+Notice: 1. USER_AT_HOST should be the id of the remote; 2. No need to change PUBKEYPATH
+
+
+
